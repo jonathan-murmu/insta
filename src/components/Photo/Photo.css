@@ -1,0 +1,13 @@
+.Photo {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.Photo img {
+  height: 100%;
+  width: 100%;
+}
+.imagegrid{
+  object-fit: cover;
+}
