@@ -5,7 +5,7 @@ const photo = (props) => {
   let photoImgClasses = [];
   if (props.grid) {
     // When gird the image is cropped and centered.
-    photoImgClasses = [classes.imagegrid]
+    photoImgClasses = [classes.imagegrid, "img-fluid"]
   }
   return (
   <div className={classes.Photo} style={{height: props.height, width: props.width}}>
