@@ -14,12 +14,9 @@ class Layout extends Component {
         {/* side bar component */}
 
         {/* main component */}
-        <div className="container">
         <main>
           {this.props.children}
-        </main>
-        </div>
-        
+        </main>        
       </Aux>
     );
   }
