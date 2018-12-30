@@ -1,0 +1,3 @@
+export { 
+  getPhotos
+} from './photogrid';

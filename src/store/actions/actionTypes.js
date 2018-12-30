@@ -1,0 +1,2 @@
+export const SET_PHOTOS = 'SET_PHOTOS';
+export const SET_PHOTOS_FAILED = 'SET_PHOTOS_FAILED';

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Photo from '../../components/Photo/Photo';
 import Spinner from '../../components/UI/Spinner/Spinner';
-import axios from 'axios';
+import axios from '../../axios_pics';
 import withErrorHandler from '../../hoc/wihtErrorHandler/withErrorHandler'; 
 import Aux from '../../hoc/Aux/Aux';
+import * as photoGridActions from '../../store/actions/index';  // index can be omitted 
 
 
 class Photogrid extends Component {
@@ -13,20 +15,21 @@ class Photogrid extends Component {
         error: false
     }
     componentDidMount () {
-        axios.get('https://insta-7bcc9.firebaseio.com/photos.json')
-        .then(response => {
-            this.setState({ photos: response.data  })
-        })
-        .catch( error => {
-            this.setState({ error: true })
-        });
+        this.props.getPhotos();
+        // axios.get('https://insta-7bcc9.firebaseio.com/photos.json')
+        // .then(response => {
+        //     this.setState({ photos: response.data  })
+        // })
+        // .catch( error => {
+        //     this.setState({ error: true })
+        // });
     }
     render() {
         let photoGrids = <Spinner />;
-        if (this.state.photos) {
-            let photos = this.state.photos.map(function(photo) {
+        if (this.props.phts) {
+            let photos = this.props.phts.map(function(photo, index) {
                 return <div className="col-md-4 sm-12 p-2">
-                            <Photo key={photo} height="215px" width="229px" grid="grid" src={photo.Image}/>
+                            <Photo key={index} height="215px" width="229px" grid="grid" src={photo.Image}/>
                         </div>
              });
 
@@ -47,4 +50,17 @@ class Photogrid extends Component {
     }
 }
 
-export default withErrorHandler(Photogrid, axios);
+const mapStateToProps = state => {
+    return {
+        phts: state.photos,
+        error: state.error
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getPhotos: () => dispatch(photoGridActions.getPhotos())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(Photogrid, axios));
