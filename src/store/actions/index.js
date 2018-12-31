@@ -1,3 +1,5 @@
 export { 
-  getPhotos
+  getPhotos,
+  setPhotos,
+  setPhotosFailed
 } from './photogrid';
