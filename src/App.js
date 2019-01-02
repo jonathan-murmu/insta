@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 
-import Logo from './components/Logo/Logo';
 import Layout from './hoc/Layout/Layout';
-import Photogrid from './containers/Photogrid/Photogrid';
+import Home from './containers/Home/Home';
 class App extends Component {
   render() {
     let routes = (
       <Switch>
+        <Route exact path='/' component={Home}/>
         <Redirect to="/" />
       </Switch>
     );
@@ -15,7 +15,6 @@ class App extends Component {
     return (
         <Layout>
           { routes }
-          <Photogrid/>
         </Layout>
     );
   }

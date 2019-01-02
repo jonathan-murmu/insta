@@ -28,22 +28,22 @@ class Photogrid extends Component {
         let photoGrids = <Spinner />;
         if (this.props.phts) {
             let photos = this.props.phts.map(function(photo, index) {
-                return <div className="col-md-4 sm-12 p-2">
-                            <Photo key={index} height="215px" width="229px" grid="grid" src={photo.Image}/>
-                        </div>
-             });
+                return ( 
+                    <div className="col-md-4 sm-12 p-2">
+                        <Photo key={index} height="215px" width="229px" grid="grid" src={photo.Image}/>
+                    </div>
+                );
+            });
 
-             photoGrids = <div className="row mt-5">
-            <div className="col-md-6 offset-md-3">
+            photoGrids = (
                 <div className="row">
                     {photos}
                 </div>
-            </div>
-        </div>;
+            );
         }
         return (
             <Aux>
-            {photoGrids}
+                {photoGrids}
             </Aux>
             
         );

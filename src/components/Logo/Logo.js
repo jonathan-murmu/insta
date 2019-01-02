@@ -4,8 +4,7 @@ import instalogo from '../../assets/images/logo.png';
 
 const logo = (props) => (
   <div className={classes.Logo} style={{height: props.height}}>
-        <img src={instalogo} alt="Logo" />
-    </div>
-);
-
+    <img src={instalogo} alt="Logo" />
+  </div>
+);  
 export default logo;
