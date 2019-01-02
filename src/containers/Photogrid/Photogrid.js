@@ -30,7 +30,7 @@ class Photogrid extends Component {
             let photos = this.props.phts.map(function(photo, index) {
                 return ( 
                     <div className="col-md-4 sm-12 p-2">
-                        <Photo key={index} height="215px" width="229px" grid="grid" src={photo.Image}/>
+                        <Photo key={index} height="215px" grid="grid" src={photo.Image}/>
                     </div>
                 );
             });
