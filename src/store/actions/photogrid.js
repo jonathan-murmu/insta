@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios_pics';
+// import axios from '../../axios_pics';
 
 
 export const setPhotos = ( photos ) => {

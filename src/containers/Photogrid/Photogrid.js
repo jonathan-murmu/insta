@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import Photo from '../../components/Photo/Photo';
 import Spinner from '../../components/UI/Spinner/Spinner';
@@ -30,7 +31,7 @@ class Photogrid extends Component {
             let photos = this.props.phts.map(function(photo, index) {
                 return ( 
                     <div className="col-md-4 sm-12 p-2">
-                        <Photo key={index} height="215px" grid="grid" src={photo.Image}/>
+                        <Link to={`/photos/${index}`}><Photo key={index} height="215px" grid="grid" src={photo.Image}/></Link>
                     </div>
                 );
             });

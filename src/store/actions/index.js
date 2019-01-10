@@ -9,3 +9,9 @@ export {
   setProfile,
   setProfileFailed
 } from './profileSummary';
+
+export {
+  getSinglePhoto,
+  setSinglePhoto,
+  setSinglePhotoFailed
+} from './singlePhoto';
