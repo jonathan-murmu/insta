@@ -1,5 +1,11 @@
 export { 
   getPhotos,
   setPhotos,
-  setPhotosFailed
+  setPhotosFailed,
 } from './photogrid';
+
+export {
+  getProfile,
+  setProfile,
+  setProfileFailed
+} from './profileSummary';

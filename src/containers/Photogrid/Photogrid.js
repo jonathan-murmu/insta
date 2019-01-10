@@ -52,8 +52,8 @@ class Photogrid extends Component {
 
 const mapStateToProps = state => {
     return {
-        phts: state.photos,
-        error: state.error
+        phts: state.photogrid.photos,
+        error: state.photogrid.error
     }
 }
 
