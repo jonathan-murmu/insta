@@ -18,12 +18,12 @@ class ProfileSummary extends Component {
         if ( this.props.profile ) {
             profile = (
             <div className="row my-5">
-                <div className="col-3">
+                <div className="col-md-3 col-12">
                     <img src={this.props.profile.profile_pic} className={classes.profile_pic} alt="Profile Pic" />
                 </div>
-                <div className="col-9">
+                <div className="col-md-9 col-12">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-md-12">
                             <h2>{this.props.profile.username}</h2>
                         </div>
                         <div className="col-4">
