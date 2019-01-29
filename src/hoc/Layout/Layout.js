@@ -14,7 +14,7 @@ class Layout extends Component {
         {/* side bar component */}
 
         {/* main component */}
-        <main>
+        <main style={{background:"#fafafa"}}>
           {this.props.children}
         </main>        
       </Aux>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)https://s.codepen.io/boomerang/iFrameKey-7f6a78c9-24ab-3dad-bedd-92ec49b35778/index.html?editors=0010 -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script><script src="./css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/gaearon/pen/VmmPgp?editors=0010">
+
+
+<style class="cp-pen-styles"></style></head><body>
+<div id="root"><form><label>Name:<input type="text"></label><input type="submit" value="Submit"></form></div>
+
+<script src="./stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script><script src="./react.development.js"></script><script src="./react-dom.development.js"></script>
+<script>var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var NameForm = function (_React$Component) {_inherits(NameForm, _React$Component);
+  function NameForm(props) {_classCallCheck(this, NameForm);var _this = _possibleConstructorReturn(this, (NameForm.__proto__ || Object.getPrototypeOf(NameForm)).call(this,
+    props));
+    _this.state = { value: '' };
+
+    _this.handleChange = _this.handleChange.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);return _this;
+  }_createClass(NameForm, [{ key: 'handleChange', value: function handleChange(
+
+    event) {
+      this.setState({ value: event.target.value });
+    } }, { key: 'handleSubmit', value: function handleSubmit(
+
+    event) {
+      alert('A name was submitted: ' + this.state.value);
+      event.preventDefault();
+    } }, { key: 'render', value: function render()
+
+    {
+      return (
+        React.createElement('form', { onSubmit: this.handleSubmit },
+          React.createElement('label', null, 'Name:',
+
+            React.createElement('input', { type: 'text', onChange: this.handleChange })),
+
+          React.createElement('input', { type: 'submit', value: 'Submit' })));
+
+
+    } }]);return NameForm;}(React.Component);
+
+
+ReactDOM.render(
+React.createElement(NameForm, null),
+document.getElementById('root'));
+//# sourceURL=pen.js
+</script>
+</body></html>

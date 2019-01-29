@@ -7,6 +7,7 @@ import Aux from '../../hoc/Aux/Aux';
 import wihtErrorHandler from '../../hoc/wihtErrorHandler/withErrorHandler';
 import * as singlePhotoActions from '../../store/actions/index';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import Comments from '../Comments/Comments';
 
 class SinglePhoto extends Component {
     componentDidMount() {
@@ -25,10 +26,10 @@ class SinglePhoto extends Component {
         
         return (
             <Aux>
-                <div className="row mt-5 no-gutters">
+                <div className="row mt-5 no-gutters" style={{top:"50%"}}>
                     {photo}
-                    <div className="col-md-2">
-                        <h2>Comments</h2>
+                    <div className="col-md-2" style={{position: "relative", background: "white"}}>
+                        <Comments photoId={this.props.match.params.id}/>
                     </div>
                 </div>
             </Aux>
