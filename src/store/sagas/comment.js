@@ -12,8 +12,7 @@ export function* postComment(action) {
         );
         yield console.log('posted....');
         yield console.log(response.data);
-        // todo: now update the redux state with the newly posted comment
-        // yield put(actions.setSinglePhoto(response.data));
+        yield put(actions.setSingleComment(response.data.name, action.comment));
     } catch (error) {
         yield put(actions.setSinglePhotoFailed());
     }

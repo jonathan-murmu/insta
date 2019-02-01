@@ -23,6 +23,7 @@ class Comments extends Component {
             username: user
         }
         this.props.postComment(comment);
+        this.setState({comment: ''});
     }
     inputChangedHandler = ( event ) => {
         let comment = event.target.value;
@@ -58,7 +59,7 @@ class Comments extends Component {
                 <div className="row pl-3" style={{position:"absolute", bottom:0}}>
                     <div className="col-md-12">
                     <Form onSubmit={this.commentSubmitHandler}>
-                    <Input type="text" name="comment" id="comment" placeholder="Add a comment..." 
+                    <Input type="text" name="comment" id="comment" value={this.state.comment} placeholder="Add a comment..." 
                         onChange={ (event ) => this.inputChangedHandler(event) }/>
                     </Form>
                     </div>

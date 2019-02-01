@@ -32,3 +32,10 @@ export const setCommentsFailed = () => {
         type: actionTypes.SET_COMMENTS_FAILED,
     }
 }
+export const setSingleComment = (commentId, commentData) => {
+    return {
+        type: actionTypes.SET_SINGLE_COMMENT,
+        commentId: commentId,
+        commentData: commentData
+    }
+}

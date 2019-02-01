@@ -17,6 +17,17 @@ const reducer = ( state=initialState, action ) => {
                 ...state,
                 error: true
             };
+        case ( actionTypes.SET_SINGLE_COMMENT ):
+            let comment = {}
+            comment[action.commentId] = action.commentData;
+            let comments = {
+                ...state.comments,
+                ...comment
+            }
+            return {
+                ...state,
+                comments: comments
+            }
         default:
             return state;
     }

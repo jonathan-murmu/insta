@@ -21,5 +21,6 @@ export {
   postCommentFailed,
   getComments,
   setComments,
-  setCommentsFailed
+  setCommentsFailed,
+  setSingleComment
 } from './comment'
