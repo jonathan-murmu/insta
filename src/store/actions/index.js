@@ -15,3 +15,11 @@ export {
   setSinglePhoto,
   setSinglePhotoFailed
 } from './singlePhoto';
+
+export {
+  postComment,
+  postCommentFailed,
+  getComments,
+  setComments,
+  setCommentsFailed
+} from './comment'

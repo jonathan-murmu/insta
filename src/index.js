@@ -12,6 +12,7 @@ import * as serviceWorker from './serviceWorker';
 import photogridReducer from './store/reducers/photogrid';
 import profileSummary from './store/reducers/profileSummary';
 import singlePhotoReducer from './store/reducers/singlePhoto';
+import commentsReducer from './store/reducers/comments';
 import { watchPhotoGrid } from './store/sagas';
 
 
@@ -20,7 +21,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
     photogrid: photogridReducer,
     profileSummary: profileSummary,
-    singlePhoto: singlePhotoReducer
+    singlePhoto: singlePhotoReducer,
+    comments: commentsReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();
